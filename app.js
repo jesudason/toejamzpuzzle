@@ -1,6 +1,7 @@
         const PUZZLE_DIFFICULTY = 4;
         const PUZZLE_HOVER_TINT = '#009900';
 
+        var difficultyInput = document.querySelector('.difficulty-input').value;
         var _stage;
         var _canvas;
 
@@ -11,16 +12,14 @@
         var _pieceWidth;
         var _pieceHeight;
         var _currentPiece;
-        var _currentDropPiece;
+        var _currentDropPiece;  
 
         var _mouse;
-
-        var images = ["yukfeetzoomed.png", "pusszoomed.png", "snotchildzoomed.png", "badteeth.jpg"]
 
         function init() {
             _img = new Image();
             _img.addEventListener('load',onImage,false);
-            _img.src = images[Math.floor(Math.random() * images.length)];
+            _img.src = "yukfeetzoomed.png";
         }
         function onImage(e){
             _pieceWidth = Math.floor(_img.width / PUZZLE_DIFFICULTY)

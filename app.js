@@ -11,14 +11,16 @@
         var _pieceWidth;
         var _pieceHeight;
         var _currentPiece;
-        var _currentDropPiece;  
+        var _currentDropPiece;
 
         var _mouse;
 
-        function init(){
+        var images = ["yukfeetzoomed.png", "pusszoomed.png", "snotchildzoomed.png", "badteeth.jpg"]
+
+        function init() {
             _img = new Image();
             _img.addEventListener('load',onImage,false);
-            _img.src = "yukfeetzoomed.png";
+            _img.src = images[Math.floor(Math.random() * images.length)];
         }
         function onImage(e){
             _pieceWidth = Math.floor(_img.width / PUZZLE_DIFFICULTY)
